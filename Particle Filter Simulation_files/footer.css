@@ -1,0 +1,45 @@
+/****************************************************************************/
+/****************************** FOOTER STYLING ******************************/
+/****************************************************************************/
+#footer {
+	width: 960px;
+	margin: 0 auto 0;
+	color: white;
+	font-size: 14px;
+	background-color: #202020; /*#BF5700;*//*#202020;*//*#292929;*/
+	padding-top: 10px;
+	/*padding-bottom: 10px;
+	border-bottom: 10px solid black;*/
+}
+
+#footer a {
+	color: white;
+	text-decoration: none;
+}
+
+#footer a .visited {
+	color: white;
+}
+
+#footer table{
+	margin: 0 auto 0;
+	color: white;
+	font-size: 12px;
+}
+
+#footer table td {
+	text-align: center;
+	width: 200px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+#footer #designed_by {
+    background: black;
+    color: #808080;
+    font-size: 9px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}

@@ -1,0 +1,187 @@
+/****************************************************************************/
+/*********** HEADER STYLE (top of page banner and navigation menu) **********/
+/****************************************************************************/
+
+/* Styling for entire header (exact width, centered) */
+#header {
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+
+
+/* Banner Image (very top of page) */
+#banner_image {
+	height: 70px;
+	width: 960px;
+	display: block;
+}
+
+
+
+/****************************************************************************/
+/***** NAVIGATION MENU (the main menu on top; namely, navigation links) *****/
+/****************************************************************************/
+
+#main_menu {
+	background: url(/~teammco/images/menu/menuback.png) no-repeat left bottom;
+	height: 44px;
+	position: absolute;
+	bottom: -44px;
+	left: 0;
+}
+
+#main_menu ul {
+	display: inline-block;
+	height: 44px;
+	padding: 0px;
+	width: 960px;
+	list-style: none;
+	margin: 0;
+}
+
+#main_menu li {
+	float: left;
+	/*font-weight: bold;
+	font-size: 16px;
+	font-family: "Century Gothic", Helvetica, Arial;*/
+	font-weight: normal;
+	font-size: 16px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	line-height: 40px;
+	width: 120px;
+	margin: 0 1px;
+	background: url(/~teammco/images/menu/menubutton.png) center center repeat-x;
+}
+
+#main_menu a {
+	display: block;
+	border: 2px solid #000000;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	text-decoration: none;
+	text-align: center;
+	color: white;
+}
+
+/* Background images change when navigation button is selected or moused over */
+#main_menu a.selected {
+	background: url(/~teammco/images/menu/menubutton_selected.png) center center repeat-x;
+}
+#main_menu a:hover {
+	background: url(/~teammco/images/menu/menubutton_mouseover.png) center center repeat-x;
+}
+#main_menu a.selected:hover {
+	background: url(/~teammco/images/menu/menubutton_selected_mouseover.png) center center repeat-x;
+}
+
+/* Home button (doesn't have text, but rather an image; spread this image to fill the
+	entire button area by padding it, and have the user click the image instead of the
+	background button. */
+#home_icon {
+	display: block;
+	/*width: 36px;
+	height: 30px;
+	padding-top: 5px;
+	padding-left: 43px;
+	padding-right: 43px;
+	padding-bottom: 5px;*/
+	width: 34px;
+	height: 28px;
+	padding-top: 6px;
+	padding-left: 44px;
+	padding-right: 44px;
+	padding-bottom: 6px;
+	border: none;
+}
+
+
+
+/****************************************************************************/
+/******************* LINKS (NETWORKS) DROPDOWN MENU STYLE *******************/
+/****************************************************************************/
+
+#links_menu {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 30px;
+    padding: 5px;
+    margin: 0 auto 0;
+}
+
+#links_menu a {
+    margin-right: 13px;
+	display: inline-block;
+    text-decoration: none;
+}
+
+#links_menu  a:hover {
+	background: none;
+}
+/*
+#links_dropdown {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 130px;
+	height: 40px;
+}
+
+#links_dropdown a {
+	display: block;
+	/*font: bold 16px "Century Gothic", Helvetica, Arial;*/
+/*	font-weight: normal;
+	font-size: 16px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	text-align: center;
+	line-height: 40px;
+	padding-right: 16px;
+	background: url(/~teammco/images/menu/menubutton.png) center center repeat-x;
+}
+
+/* the image of the dropdown arrow */
+/*#drop_arrow {
+	position: absolute;
+	right: 15px;
+	top: 17px;
+	pointer-events: none;
+}
+
+
+/*** DROPDOWN FUNCTIONALITY HERE ***/
+
+/*#links_dropdown ul {
+	position: relative;
+	display: inline-block;
+	right: 26px;
+	height: 35px;
+	width: 95px;
+	visibility: hidden;
+	z-index: 100;
+}
+
+#links_dropdown li {
+	/*display: inline;
+	float: none;
+	border: 2px solid red;*/
+}
+
+/*#links_dropdown ul a {
+	display: block;
+	/*font: 15px "Century Gothic", Helvetica, Arial;*/
+/*	font-weight: normal;
+	font-size: 14px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	text-align: center;
+	width: 70px;
+	height: 38px;
+	line-height: 38px;
+	padding-left: 50px;
+	background: #67343B;
+	border-width: 1px;
+}
+
+#links_dropdown ul a:hover  {
+	background: #97646B;
+}*/
