@@ -25,35 +25,70 @@
         stroke: steelblue;
         stroke-width: 1.5px;
     }
+    #button_container {
+        position: absolute;
+    }
     </style>
 </head>
 
 <body>
+    <h4 style="float:right"><a href = "file:///home/prateek/Desktop/ai-robotics-project/Particle%20Filter%20Simulation.html">Part-3 Particle Filters</a></h4>
+    <h2>2. Kalman Filters </h2>
+    <form>
+        Measurements : <input type="text" id="measure" value="Already Taken Inside !">
 
+     </form>
+     <div id="btn_container">
+     <button onclick ="sense()" >Sense </button>
+     <button onclick = "move()"> Move </button>
+     </div>
 </body>
+<script>
+var counter = 0;
+means = [0,0.1,0.2,0.5,0.7,0.9,1.0]
+sigmas = [2,1,0.7,0.5,0.2,0.2,0.1]
+    function sense_data(){
+
+}
+</script>
 
 <script type="text/javascript">
 //setting up empty data array
-var data = [];
 
-getData(); // popuate data 
 
+var counter = -1;
+// popuate data 
+var mean=-1;
+var sigma = 2.5 ;
 // line chart based on http://bl.ocks.org/mbostock/3883245
+function sense(){
+    sigma = sigma - 0.5;
+    bna_gaussian();
+}
+function move(){
+    mean = mean + 1;
+    sigma = sigma + 0.3;
+    bna_gaussian();
+}
+
+function bna_gaussian(){
+counter++;
+
+var data = [];
+getData(); 
 var margin = {
         top: 20,
         right: 20,
         bottom: 30,
         left: 50
     },
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    width = 480,
+    height = 250;
 
 var x = d3.scale.linear()
-    .domain([0,100])
-    .range([0,400]);
+    .range([0, width]);
 
 var y = d3.scale.linear()
-    .domain([0,10])
     .range([height, 0]);
 
 var xAxis = d3.svg.axis()
@@ -103,7 +138,7 @@ function getData() {
 
 // loop to populate data array with 
 // probabily - quantile pairs
-for (var i = 0; i < 100000; i++) {
+for (var i = 0; i < 10000; i++) {
     q = normal() // calc random draw from normal dist
     p = gaussian(q) // calc prob of rand draw
     el = {
@@ -117,7 +152,7 @@ for (var i = 0; i < 100000; i++) {
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 data.sort(function(x, y) {
     return x.q - y.q;
-});	
+}); 
 }
 
 // from http://bl.ocks.org/mbostock/4349187
@@ -137,13 +172,15 @@ function normal() {
 
 //taken from Jason Davies science library
 // https://github.com/jasondavies/science.js/
-function gaussian(x) {
-	var gaussianConstant = 1 / Math.sqrt(2 * Math.PI),
-		mean = 15,
-    	sigma = 2;
+var m = 0;
+var s = 2;
 
+function gaussian(x) {
+    var gaussianConstant = 1 / Math.sqrt(2 * Math.PI),
     x = (x - mean) / sigma;
     return gaussianConstant * Math.exp(-.5 * x * x) / sigma;
+}
+
 };
 </script>
 
