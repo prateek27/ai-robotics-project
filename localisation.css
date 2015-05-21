@@ -11,7 +11,12 @@
 	background-color:orange;
 	margin:10px;
 }
-
+.red{
+	background-color: red;
+}
+.green{
+	background-color: green;
+}
 #example1{
 	width: 400px;
 	height: 400px;

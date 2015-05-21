@@ -3,28 +3,35 @@
 </head>
 	<title>Localisation </title>
 	<meta http-equiv="content-type" content="text/html; charset=UTF8">
+	<script type="text/javascript" src="xchart/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="xchart/d3.js"></script>
 	<script type="text/javascript" src="xchart/xcharts.js"></script>
 	<script type="text/javascript" src="xchart/xcharts.min.js"></script>
 	<script type="text/javascript" src="localisation.js"></script>
+	
 	<link rel="stylesheet" href="xchart/xcharts.css"/>
 	<link rel="stylesheet" href="localisation.css"/>
 
 </head>
 <body>
-	This is localisation.
+	<h2> 1. Localisation </h2>
 	<form>
 
-		World Size : <input type="text" id="no_of_cells" placeholder="Enter World Size" value="0"/>
+		World Size : <input type="text" id="no_of_cells" placeholder="Enter World Size"  value="5"/>
+		Measurements : <input type="text" id="measure" value="R,G">
+		Motion : <input type="text" id="motion" value="1,1">
 	</form>
 	<button onclick="generate_world()">Generate World </button>
+	<button onclick="update_world()">Update World </button>
 	<div id="world">
 	</div>
+	<div id ="message_one">
+	</div>
+	<button onclick="final_data()">Perform Localiation </button>
 
 	<figure id="example1" >
 	
 	</figure>
-
 
 </body>
 
