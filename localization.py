@@ -1,5 +1,6 @@
 measurement=['r','r']
 motion=[1,1]
+
 def sense(p,n,z):
 	phit=0.8
 	pmiss=0.2
